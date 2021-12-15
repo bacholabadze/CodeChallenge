@@ -1,4 +1,5 @@
 import random
+from art import logo
 
 
 def greeting():
@@ -17,6 +18,7 @@ def greeting():
 
 
 def playGame():
+    print(logo)
     lives = greeting()
     number = random.randint(0, 100)
     print(f'Lives remaining: {lives}')
