@@ -20,7 +20,6 @@ def display_region(data_region):
     new_region.hideturtle()
     new_region.color('black')
     new_region.penup()
-    print(data_region.x)
     new_region.goto(int(data_region.x), int(data_region.y))
     new_region.write(f"{data_region['კუთხე'].item()}", align=ALIGNMENT, font=FONT)
 
@@ -37,9 +36,7 @@ while correct_ans_count != 12:
             region_data = data[data['კუთხე'] == answer]
             display_region(region_data)
     if answer == 'დასრულება':
-        for region in regions:
-            if region not in correct_answers:
-                missing_regions.append(region)
+        missing_regions = [region for region in regions if answer == 'დასრულება' and region not in correct_answers]
         new_data = pandas.DataFrame(missing_regions)
         new_data.to_csv("გამოტოვებული კუთხეები.csv")
         break
