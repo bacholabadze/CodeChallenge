@@ -1,3 +1,5 @@
+"""Testing purposes only"""
+
 from tkinter import *
 
 window = Tk()
