@@ -3,8 +3,8 @@ import requests
 from datetime import datetime
 import time
 
-MY_EMAIL = 'fr.tsu.secret.santa@gmail.com'
-MY_PASSWORD = 'B14k4Ggr13579531'
+MY_EMAIL = ''
+MY_PASSWORD = ''
 GLDANI_LOCATION = (41.808743, 44.829843)
 
 parameters = {
